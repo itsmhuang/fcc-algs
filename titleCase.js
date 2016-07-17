@@ -1,13 +1,11 @@
 function titleCase(str) {
-//lowercase all letters
-  str = str.toLowerCase();
-//store in arr to be transformed to uppercase
-  var arrCaps = str.split(" ");
-  for (var i = 0; i < arrCaps.length; i++) {
-    arrCaps[i] = arrCaps[i].charAt(0).toUpperCase() + arrCaps[i].substr(1);    
+  var arr = str.toLowerCase()
+              .split(" ");
+
+  for(var i = 0; i< arr.length; i++) { 
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
   }
-  var newStr = arrCaps.join(" ");  
-  return newStr;  
+  return arr.join(" ");
 }
 
 titleCase("I'm a little tea pot"); //should return a string.
