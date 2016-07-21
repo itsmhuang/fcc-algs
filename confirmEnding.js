@@ -1,14 +1,23 @@
 
 function confirmEnding(str, target) {  
-  //find length of target
-  var tarVal = target.length;
+  // slice method
+  if (str.slice(-(target.length)) === target) {
+    return true;
+  } 
+  return false;
+
+  /* or substr method 
   //check if target matches str.substr 
-  if (str.substr(str.length-tarVal) === target) {
+  if (str.substr(str.length-target.length) === target) {
     return true;
   } 
   else {
     return false;
   } 
+  */
+
+  
+  
 }
 
 //confirmEnding("Bastian", "n");
