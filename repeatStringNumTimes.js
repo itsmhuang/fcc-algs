@@ -1,5 +1,12 @@
 
 function repeatStringNumTimes(str, num) {
+  var result = "";
+  for(var i = num; i >0; i--) {
+    result += str;
+  }
+    return result;
+
+  /* array push method
   //store str in arr
   var arr = str.split();
     //if num not positive, return blank str
@@ -14,6 +21,7 @@ function repeatStringNumTimes(str, num) {
   }
   //convert arr to string
   return arr.join("");
+  */
 }
 
 repeatStringNumTimes("abc", 3);
