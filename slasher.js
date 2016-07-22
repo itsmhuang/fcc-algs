@@ -1,10 +1,8 @@
 function slasher(arr, howMany) {  
-  arr = arr.slice(howMany);
-  return arr;
+  return arr.slice(howMany);
 
 	//with splice
-	//arr = arr.splice(howMany);
-	//return arr; 
+	//return arr.splice(howMany);
 }
 
 //slasher([1, 2, 3], 2);// should return [3].
