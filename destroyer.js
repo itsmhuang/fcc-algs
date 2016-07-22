@@ -1,14 +1,10 @@
 function destroyer(arr) {
   //store values to be destroyed in array
-  var args = arr.slice.call(arguments).slice(1);
+  var check = arr.slice.call(arguments).slice(1);
   
-  return arr.filter(function(val) {
-    for(var i = 0; i < args.length; i++) {
-      if(args[i] === val) {
-        return false;
-      }
-    }
-    return true;
+  return arr.filter(function(e) {
+    //return values not in check
+    return check.indexOf(e) === -1;
   });
 
 }
