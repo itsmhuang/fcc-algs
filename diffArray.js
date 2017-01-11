@@ -2,12 +2,12 @@ function diffArray(arr1,arr2){
   var newArr =[];
 
   function unique1(e,i,arr){
-    //find items NOT in arr1
+    //find anything that is not in arr1
     return (arr1.indexOf(e) === -1);
   }
 
   function unique2(e,i,arr){
-    //find items NOT in arr2
+    //find anything that is not in arr2
     return (arr2.indexOf(e) === -1);
   }
 
