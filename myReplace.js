@@ -1,11 +1,15 @@
 function myReplace(str, before, after) {
+  var newStr;
+  var capsAfter;
   if((/[A-Z]/.test(before[0]))){
-    after = after.split("");
-    after[0] = after[0].toUpperCase();
-    after = after.join("");
+    capsAfter = after.split("");
+    capsAfter[0] = capsAfter[0].toUpperCase();
+    capsAfter = capsAfter.join("");
+    newStr = str.replace(before,capsAfter);
   }
-  // console.log(after.split("").splice(0,1,after[0].toUpperCase()));
-  var newStr = str.replace(before,after)
+  else{
+    newStr = str.replace(before,after);  
+  }
   console.log(newStr);
   return newStr;
 }
