@@ -8,7 +8,7 @@ function smallestCommons(arr) {
   var largest = sortedArr[1];
   //multiple never changes 
   var multiple = arr[0]*arr[1];  
-  //will change to get new multiples to check
+  //need this if range doesn't start from 1. will change to get new multiples to check
   var multipleOfMultiple = arr[0]*arr[1];  
    for(var i= smallest;i<=largest;i++){
      //if i is not multiple
@@ -17,7 +17,7 @@ function smallestCommons(arr) {
        multiplier++;
        //check new multiple
        multipleOfMultiple = multiplier * multiple;
-       //i goes back down to smallest
+       //i goes back down to smallest to check the new multipleOfMultiple as declared ^
        i = smallest;
       }
     }
